@@ -3,37 +3,42 @@ window.onload = function()
 	console.log('ready');
 };
 
-document.addEventListener("DOMContentLoaded", function(event) { 
+$(document).ready(function() {
+  $('#previous').on('click', function(){
+    // Change to the previous image
+    $('#im_' + currentImage).stop().fadeOut(1);
+    decreaseImage();
+    $('#im_' + currentImage).stop().fadeIn(1);
+  }); 
+  $('#next').on('click', function(){
+    // Change to the next image
+    $('#im_' + currentImage).stop().fadeOut(1);
+    increaseImage();
+    $('#im_' + currentImage).stop().fadeIn(1);
+  }); 
 
-var slideIndex = 1;
-showSlides(slideIndex);
+  var currentImage = 1;
+  var totalImages = 3;
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("slideshowFade");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1};
-  if (n < 1) {slideIndex = slides.length};
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
+  function increaseImage() {
+    ++currentImage;
+    if(currentImage > totalImages) {
+      currentImage = 1;
+    }
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+  function decreaseImage() {
+    --currentImage;
+    if(currentImage < 1) {
+      currentImage = totalImages;
+    }
   }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-}
+  
+  $(function() {
+	  $("#header").load("header.html");
+  });
+  
+  
+  
+  
+  
 });
-
-
-
-
-   
