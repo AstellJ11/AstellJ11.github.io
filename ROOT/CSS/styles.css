@@ -62,7 +62,6 @@
 }
 
 #showContainer {
-  /* Main wrapper for all images */
   width: 670px;
   height: auto;
   padding: 0;
@@ -76,7 +75,6 @@
 	height: 100px;
 }
 .showButton {
-  /* Make buttons look nice */ 
   cursor: pointer;
   float: left;
   width: 25px;
@@ -98,13 +96,11 @@
   float: right;
 }
 .imageContainer:not(:first-child) {
-  /* Hide all images except the first */
   display: none;
 }
 
 #test {
 	overflow : hidden;
-	position:absolute;	
-	
+	position:absolute;		
 }
 

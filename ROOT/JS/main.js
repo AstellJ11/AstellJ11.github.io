@@ -31,14 +31,7 @@ $(document).ready(function() {
     if(currentImage < 1) {
       currentImage = totalImages;
     }
-  }
-  
-  $(function() {
-	  $("#header").load("header.html");
-  });
-  
-  
-  
+  }  
   
   
 });
