@@ -1,20 +1,12 @@
-window.onload = function()
-{
-	console.log('ready');
-};
-
 window.onload = function() {
-  var c = document.getElementById("imageView");
-  var ctx = c.getContext("2d");
-  var img = document.getElementById("HoodieFront");
-  ctx.drawImage(img, 10, 10);
-};
+    console.log('ready');
+}
 
 if (window.addEventListener) {
    window.addEventListener('load', function() { init(); });
 }
 
-var started = false;
+started = false;
 var canvas, context;
 var stampId = '';
 var lastColor = 'black';
@@ -25,7 +17,6 @@ function init() {
     canvas = $('#imageView').get(0);
     context = canvas.getContext('2d');
 	
-    // Auto-adjust canvas size to fit window.
     canvas.width  = window.innerWidth - 75;
     canvas.height = window.innerHeight - 75;
 	
@@ -33,7 +24,7 @@ function init() {
     canvas.addEventListener('click', onClick, false);
 	canvas.addEventListener('mousedown', function(e) { enableDraw = true; }, false); 
     canvas.addEventListener('mouseup', function(e) { enableDraw = false; started = false; }, false); 
-    // Add events for toolbar buttons.
+
     $('#red').get(0).addEventListener('click', function(e) { 
      onColorClick(e.target.id); }, false);
     $('#pink').get(0).addEventListener('click', function(e) { 
@@ -59,7 +50,6 @@ function init() {
     $('#save').get(0).addEventListener('click', function(e) { onSave(); }, false);
 }
 
-
 function onMouseMove(ev) {
     var x, y;
         x = ev.layerX ;
@@ -77,7 +67,6 @@ function onMouseMove(ev) {
 }
     $('#stats').text(x + ', ' + y);
 }
-
 
 function onClick(e) {
     if (stampId.length > 0) {
@@ -103,6 +92,16 @@ function onSave() {
 	
 }
 
+image.onload = finishDrawing;
+function finishDrawing(){
+	var drawing = document.getElementById("myCanvas");
+	var con = drawing.getContext("2d");
+    var hoodieFront = document.getElementById("hoodieFront");
+    con.drawImage(hoodieFront, 0, 0, 50, 50);
+    var image2 = new Image();
+    image2.src = "Assets/hoodie_front.png";
+    con.drawImage(image2, 100, 100, 70, 50);
+}
 
 
 
