@@ -61,12 +61,49 @@
 	display: block;
 }
 
+.saleAdvert {
+	
+}
+
+#saleImage {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.saleButtons {
+	text-align: center;
+}
+
+.btn {
+display: inline-block;
+    width: 100%;
+    max-width: 275px;
+    padding: 10px 10px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    transition: all 0.3s linear 0s;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+	}
+
+.btn:hover {
+	background: #fff;
+	color: black;
+}
+
+.saleMen {color: #fff;}
+.saleWomen {color: #fff;}
+
 #showContainer {
   width: 670px;
   height: auto;
   padding: 0;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 32rem;
   overflow: hidden;
   position : relative;
 }
