@@ -73,6 +73,7 @@
 
 .saleButtons {
 	text-align: center;
+	margin: -4rem;
 }
 
 .btn {
@@ -103,9 +104,9 @@ display: inline-block;
   height: auto;
   padding: 0;
   margin: 0 auto;
-  margin-top: 32rem;
   overflow: hidden;
   position : relative;
+  margin-top: 6.25rem;
 }
 
 .imageContainer.img {
@@ -167,7 +168,7 @@ display: inline-block;
 .flex-container {
   list-style: none;
   margin: 0;
-  margin-top: 40px;
+  margin-top: 1rem;
   padding: 0;
   display: -webkit-box;
   display: -moz-box;
@@ -190,12 +191,69 @@ display: inline-block;
 .flex-container img {
   max-width:60%;
   height:auto;
+  padding-bottom: 2rem;
+}
+
+.footerColor {
+	background: grey;
+}
+
+.footerContainer {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 400px;
+	background-color: grey;
+}
+
+.usefulLinks {
+	display: block;
+    list-style: none outside none;
+    padding-left: 0;
+    float: left;
+	width: auto;
+    margin: 20px 0;
+}
+
+.contactUs {
+	display: block;
+    list-style: none outside none;
+    padding-left: 0;
+    float: right;
+	width auto;
+    margin: 20px 0;
+}
+
+.usefulLinks li {
+-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.usefulLinks h2 {
+	font-weight: 300;
+}
+.contactUs h2 {
+	font-weight: 300;
 }
 
 
 
-#test {
-	overflow : hidden;
-	position:absolute;		
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
