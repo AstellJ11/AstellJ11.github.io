@@ -3,6 +3,7 @@
 <head> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="../JS/paint.js"></script>
+		<link rel="stylesheet" type="text/css" href="../CSS/styles.css"/>
 	<link rel="stylesheet" type="text/css" href="CustomStyles.css" />
 	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
@@ -12,7 +13,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>	
+<body>
+	<div class="header">
+		<h1><a href="../index.html">Welcome</a></h1>
+	</div>
+	
+	<nav class="navBar">
+		<ul class="navBarList">
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../shop.html">Men</a></li>
+			<li><a href="../shop.html">Women</a></li>
+			<li><a href="../shop.html">New</a></li>
+			<li><a href="#about">About</a></li>
+			<li class="saleDropdown">
+			<li><a href=".//shop.html">SALE</a></li>
+			<li><a href="customizer.html">Create Your Own</a></li>
+			</li>
+		</ul>
+	</nav>
+	
     <div id="container">
 		<div id="colorToolbar"> 
 			<div id="red"></div>

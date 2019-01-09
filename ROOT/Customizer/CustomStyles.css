@@ -5,6 +5,7 @@
 #colorToolbar {
 	border: 1px solid black; 
 	float: left;
+	margin: 0.5rem
 }
 
 #break {
