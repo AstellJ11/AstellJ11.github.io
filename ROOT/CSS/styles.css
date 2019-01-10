@@ -1,9 +1,30 @@
+body {
+	overflow: auto;
+    position: relative;
+}
+
 .header {
-	padding: 20px;
-	text-align: left;
-	background: grey;
-	color: white;
-	font-size: 30px;
+	padding: 0;
+	background: white;
+}
+
+#rotating-item-wrapper {
+    position: relative;
+	text-align: center;
+	height: 220px;
+    display: flex;
+    width: 13rem;
+    margin: 0 auto;
+	margin-bottom: -20px;
+    position: relative;
+    margin-top: 0.5rem;
+}
+.rotating-item {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+	text-align: center;
 }
 	
 .navBar {
