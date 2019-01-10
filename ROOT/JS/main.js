@@ -1,6 +1,6 @@
 window.onload = function()
 {
-	console.log('ready');
+	console.log('main ready');
 };
 
 $(document).ready(function() {
