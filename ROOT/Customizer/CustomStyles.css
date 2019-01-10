@@ -1,3 +1,9 @@
+html {
+	overflow: auto;
+    position: relative;
+	margin: 0;
+}
+
 #container {
 	padding:5px 0px 0px 4px;
 }
@@ -5,13 +11,13 @@
 #colorToolbar {
 	border: 1px solid black; 
 	float: left;
-	margin: 0.5rem
 }
 
 #break {
 	clear: both;
 }
 
+/* Setting to colours of each box and what it will draw */
 #red {
 	background:red; 
 	width:50px; 
@@ -91,8 +97,22 @@
 	border-top: 1px solid black; 
 }
 
-#hoodieFront {
-	display: none
+h2 {
+	font-size: 50;
+}
+
+/* Having the touchscreen error message not shown until the screen is below the size of the largest touchscreen (iPad-Pro) */
+.support {
+	display:none;
+}
+
+@media only screen and (max-width: 1024px) {
+	#container {
+		display: none;
+	}
+	.support {
+		display: inline-block;
+	}
 }
 
 

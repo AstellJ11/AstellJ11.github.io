@@ -1,3 +1,4 @@
+/* Ensuring the body is always filling the entire screen */
 body {
 	overflow: auto;
     position: relative;
@@ -9,6 +10,7 @@ body {
 	background: white;
 }
 
+/* Using display: flex to resize the image when scalling up/down with losing it's positioning */
 #rotating-item-wrapper {
     position: relative;
 	text-align: center;
@@ -28,6 +30,7 @@ body {
 	text-align: center;
 }
 	
+/* Styling for the navigation bar */	
 .navBar {
 	overflow: hidden;
 	background-color: #333;
@@ -57,6 +60,11 @@ body {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;	
+	text-transform: uppercase;
+    transition: all 0.3s linear 0s;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
 }  
 .navBarList li a:hover, .dropdown:hover .dropbtn {
   background-color: #111;
@@ -121,6 +129,7 @@ display: inline-block;
 .saleMen {color: #fff;}
 .saleWomen {color: #fff;}
 
+/* Centering and postioning the container so nothing overlaps and there is equal seperation between */
 #showContainer {
   height: auto;
   padding: 0;
@@ -150,6 +159,7 @@ display: inline-block;
 	margin-right: auto
 }
 
+/* Setting the max-width of the individual images to 100% so the can be changed by the div above them */
 #im_1 img {
 	max-width: 100%
 }
@@ -189,6 +199,7 @@ display: inline-block;
   display: none;
 }
 
+/* Supporting the size depending of which browser the user is using */
 .flex-container {
   list-style: none;
   margin: 0;
@@ -386,6 +397,7 @@ input[type=submit]:hover {
   ;
 }
 
+/* Changing to postion of the slideshow buttons when the screen size is reduced */
 @media only screen and (max-width: 780px) {
 	.saleButtons {
 		display: none;

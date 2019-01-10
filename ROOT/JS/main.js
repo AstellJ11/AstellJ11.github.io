@@ -1,8 +1,10 @@
+// Checking the js is being loaded
 window.onload = function()
 {
 	console.log('main ready');
 };
 
+// Waiting to be ready
 $(document).ready(function() {
   $('#previous').on('click', function(){
     // Change to the previous image
@@ -20,6 +22,7 @@ $(document).ready(function() {
   var currentImage = 1;
   var totalImages = 3;
 
+	// When clicked 'next' button increases current image
   function increaseImage() {
     ++currentImage;
     if(currentImage > totalImages) {
@@ -34,25 +37,23 @@ $(document).ready(function() {
   }   
 });
 
-$(window).on('load', function() { //start after HTML, images have loaded
+$(window).on('load', function() {
  
     var InfiniteRotator =
     {
         init: function()
         {
-            //initial fade-in time (in milliseconds)
+            // Time taken to fade in
             var initialFadeIn = 1000;
  
-            //interval between items (in milliseconds)
+            // Time taken between fades
             var itemInterval = 2000;
  
-            //cross-fade time (in milliseconds)
+            // Time taken to swtich between the two
             var fadeTime = 1500;
  
-            //count number of items
             var numberOfItems = $('.rotating-item').length;
  
-            //set current item
             var currentItem = 0;
  
             //show first item

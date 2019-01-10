@@ -2,19 +2,20 @@
 <html>
 <head> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="../JS/paint.js"></script>
 	<script src="../JS/main.js"></script>
-	<link rel="stylesheet" type="text/css" href="../CSS/styles.css"/>
+	<script src="../JS/paint.js"></script>
 	<link rel="stylesheet" type="text/css" href="CustomStyles.css" />
+	<link rel="stylesheet" type="text/css" href="../CSS/styles.css" />
 	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+
 	<div class="header">
 		<div id="rotating-item-wrapper">
-			<a class="homeLogo222" href="../index.html">
+			<a class="homeLogo222" href="index.html">
 			<img class="rotating-item" src="../Assets/header1.png"/>
 			<img class="rotating-item" src="../Assets/header2.png"/>
 			<img class="rotating-item" src="../Assets/header3.png"/>
@@ -35,6 +36,7 @@
 		</ul>
 	</nav>
 	
+	<!––Creating the canvas and the colour selector––>
     <div id="container">
 		<div id="colorToolbar"> 
 			<div id="red"></div>
@@ -62,16 +64,22 @@
 			<div id="save">Save</div>
 				<div id="break"></div>
         </div> 
-		
+	
 		
     <div id="myCanvas" style="float: left;">
         <canvas id="imageView">
 			
         </canvas>       
         </div>
+		<!––Giving the user a warning as there is no comfirmation currently––>
+		<h2> WARNING : Clicking save will automatically download a png.</h2>
 	<div id="stats" style="font-size:8pt; padding-left: 50px; float: left;">0 0</div>        
     </div>
 	
+	<!––For devices using touch screen this feature was not avaliable––>
+	<div class="support">
+		<h1> Sorry this feature is not currently supported for your device.</h1>
+	<div>
 
 	
 </body>

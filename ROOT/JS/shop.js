@@ -4,6 +4,7 @@ if (document.readyState == 'loading') {
     ready()
 }
 
+// Loading all the needed fuctions
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
@@ -26,6 +27,8 @@ function ready() {
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
+
+// When purchase is clicked the user is given feedback that they have completed
 function purchaseClicked() {
     alert('Thank you for your purchase')
     var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -49,6 +52,7 @@ function quantityChanged(event) {
     updateCartTotal()
 }
 
+// Adding the relevent item to the cart when selected
 function addToCartClicked(event) {
     var button = event.target
     var shopItem = button.parentElement.parentElement
@@ -70,6 +74,8 @@ function addItemToCart(title, price, imageSrc) {
             return
         }
     }
+	
+	// Defining the contents as a variable
     var cartRowContents = `
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">

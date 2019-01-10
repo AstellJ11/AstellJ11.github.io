@@ -12,6 +12,7 @@
     margin-bottom: 15px;
 }
 
+/* Keeping a constant height but allowing the width to differ when changing size */
 .shop-item-image {
     height: 250px;
 }

@@ -6,6 +6,7 @@ if (window.addEventListener) {
    window.addEventListener('load', function() { init(); });
 }
 
+// Declaring all the variables being used
 started = false;
 var canvas, context;
 var stampId = '';
@@ -13,6 +14,7 @@ var lastColor = 'black';
 var lastStampId = '';
 var enableDraw = false;
  
+ // Main draw function, draws when mouse down and constantly udpates with mouse postion
 function init() {
     canvas = $('#imageView').get(0);
     context = canvas.getContext('2d');
@@ -74,6 +76,7 @@ function onClick(e) {
     }
 }
 
+// Fucntion allowing the user to pick the colour and draw with the matching colour.
 function onColorClick(color) {
     context.closePath();
     context.beginPath();
@@ -88,20 +91,35 @@ function onColorClick(color) {
     lastColor = color;
 }
 
+// Sending the canvas into a black page and converting it to a png. Then automatically downloading it for the user. Sends them back to the previous page.
 function onSave() {
-	
+    var img = canvas.toDataURL("image/png");
+    document.write('<img src="' + img + '"/>');
+	download(canvas, 'myimage.png');
+	history.go(-1);
 }
 
-image.onload = finishDrawing;
-function finishDrawing(){
-	var drawing = document.getElementById("myCanvas");
-	var con = drawing.getContext("2d");
-    var hoodieFront = document.getElementById("hoodieFront");
-    con.drawImage(hoodieFront, 0, 0, 50, 50);
-    var image2 = new Image();
-    image2.src = "Assets/hoodie_front.png";
-    con.drawImage(image2, 100, 100, 70, 50);
+// Function for the download, when clicked.
+function download(canvas, filename) {
+
+  var lnk = document.createElement('a'), e;
+
+  lnk.download = filename;
+  lnk.href = canvas.toDataURL("image/png;base64");
+
+  if (document.createEvent) {
+    e = document.createEvent("MouseEvents");
+    e.initMouseEvent("click", true, true, window,
+                     0, 0, 0, 0, 0, false, false, false,
+                     false, 0, null);
+
+    lnk.dispatchEvent(e);
+  } else if (lnk.fireEvent) {
+    lnk.fireEvent("onclick");
+  }
 }
+
+
 
 
 
