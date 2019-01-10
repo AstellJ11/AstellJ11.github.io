@@ -135,3 +135,13 @@
     font-size: 1.75em;
 }
 
+.btn {
+	background-color: black;
+	width: 65%;
+	border-radius: 30px 30px 30px 30px
+}
+
+
+
+
+
