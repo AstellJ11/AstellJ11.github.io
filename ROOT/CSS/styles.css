@@ -121,13 +121,13 @@ display: inline-block;
 .saleWomen {color: #fff;}
 
 #showContainer {
-  width: 670px;
   height: auto;
   padding: 0;
   margin: 0 auto;
-  overflow: hidden;
   position : relative;
   margin-top: 6.25rem;
+  display: flex;
+  margin-bottom: 2rem;
 }
 
 .imageContainer.img {
@@ -137,25 +137,26 @@ display: inline-block;
 }
 
 #im_1 {
-	width:600px;
-	height:440px;
-
 	margin-left: auto;
 	margin-right: auto
 }
 #im_2 {
-	width:600px;
-	height:440px;
-
 	margin-left: auto;
 	margin-right: auto
 }
 #im_3 {
-	width:600px;
-	height:440px;
-
 	margin-left: auto;
 	margin-right: auto
+}
+
+#im_1 img {
+	max-width: 100%
+}
+#im_2 img {
+	max-width: 100%
+}
+#im_3 img {
+	max-width: 100%
 }
 .showButton {
 	cursor: pointer;
@@ -178,8 +179,9 @@ display: inline-block;
 }
 
 .buttoncentre {
-	position: inherit;
-	left: 46%;
+	position: absolute;
+	left: 49%;
+	top: 101%;
 }
 
 .imageContainer:not(:first-child) {
@@ -311,6 +313,31 @@ input[type=submit]:hover {
   margin-bottom: 10%;
   ;
 }
+
+@media only screen and (max-width: 780px) {
+	.saleButtons {
+		display: none;
+	}
+	
+	#showContainer {
+		margin-top: 2.25rem;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.saleButtons {
+		display: none;
+	}
+	
+	#showContainer {
+		margin-top: 2.25rem;
+	}
+	.buttoncentre {
+		left: 43%;
+	}
+}
+
+
 
 
 
